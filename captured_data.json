@@ -1,0 +1,70 @@
+[
+    {
+        "timestamp": 1693563641.71349,
+        "last_price": 26001.5
+    },
+    {
+        "timestamp": 1693563714.799324,
+        "last_price": 26012.5
+    },
+    {
+        "timestamp": 1693563798.067294,
+        "last_price": 26010.5
+    },
+    {
+        "timestamp": 1693564001.04811,
+        "last_price": 26010.0
+    },
+    {
+        "timestamp": 1693564110.291858,
+        "last_price": 25999.5
+    },
+    {
+        "timestamp": 1693564181.938254,
+        "last_price": 25999.5
+    },
+    {
+        "timestamp": 1693564257.111692,
+        "last_price": 25990.0
+    },
+    {
+        "timestamp": 1693564324.282697,
+        "last_price": 25987.5
+    },
+    {
+        "timestamp": 1693564395.485744,
+        "last_price": 25991.5
+    },
+    {
+        "timestamp": 1693564520.000227,
+        "last_price": 25992.5
+    },
+    {
+        "timestamp": 1693564594.617507,
+        "last_price": 25993.0
+    },
+    {
+        "timestamp": 1693564661.314245,
+        "last_price": 25976.0
+    },
+    {
+        "timestamp": 1693564721.450647,
+        "last_price": 25972.0
+    },
+    {
+        "timestamp": 1693564781.555624,
+        "last_price": 25973.5
+    },
+    {
+        "timestamp": 1693564857.524593,
+        "last_price": 25984.5
+    },
+    {
+        "timestamp": 1693564939.861191,
+        "last_price": 25988.5
+    },
+    {
+        "timestamp": 1693565001.735205,
+        "last_price": 25992.5
+    }
+]

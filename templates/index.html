@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.stock.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var dps1 = [], dps2 = [];
+      var stockChart = new CanvasJS.StockChart("chartContainer", {
+        theme: "light2",
+        exportEnabled: true,
+        title: {
+          text: "Chart (XBTUSD)"
+        },
+        subtitles: [{
+          text: "Bitcoin Price (in USD)"
+        }],
+        charts: [{
+          axisX: {
+            crosshair: {
+              enabled: true,
+              snapToDataPoint: true
+            }
+          },
+          axisY: {
+            prefix: "$"
+          },
+          data: [{
+            type: "candlestick",
+            yValueFormatString: "$#,###.##",
+            dataPoints: dps1
+          }]
+        }],
+        navigator: {
+          data: [{
+            dataPoints: dps2
+          }],
+          slider: {
+            minimum: new Date(2018, 04, 01),
+            maximum: new Date(2018, 06, 01)
+          }
+        }
+      });
+
+      $.getJSON("https://canvasjs.com/data/docs/ltcusd2018.json", function (data) { // Updated AJAX request to Flask backend
+        for (var i = 0; i < data.length; i++) {
+          dps1.push({ x: new Date(data[i].date), y: [Number(data[i].open), Number(data[i].high), Number(data[i].low), Number(data[i].close)] });
+          dps2.push({ x: new Date(data[i].date), y: Number(data[i].close) });
+
+        }
+        stockChart.render();
+
+      });
+    }
+  </script>
+</head>
+
+<body
+  background="https://cdn1.vectorstock.com/i/1000x1000/18/40/stock-market-background-or-forex-trading-business-vector-38561840.jpg">
+  <div style="display: flex; justify-content: right;">
+    <div id="chartContainer" style="height: 300px; width: 40%; margin-top: 100px;"></div>
+  </div>
+  <br>
+  <div id="p" style="height: 100px; width: 100%; margin-top: 120px;">
+    <center>
+      <p>@design by Asharib & Mahnoor</p>
+    </center>
+  </div>
+</body>
+
+</html>
